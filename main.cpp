@@ -59,6 +59,7 @@ int main() {
             document.Delete(position);
             std::cout << "The figure has been removed\n";
         } else if (line == "print") {
+            std::cout << "Figures in document:\n";
             std::cout << document;
         } else if (line == "undo") {
             document.Undo();

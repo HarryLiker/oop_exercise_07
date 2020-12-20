@@ -1,2 +1,6 @@
 /build
 .vscode
+/CMakeFiles
+.cmake
+oop_exercise_07
+CMakeCache.txt
