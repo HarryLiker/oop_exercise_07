@@ -1,0 +1,19 @@
+add 3 70 50 2
+print
+new
+print
+add 1 90 20 1
+add 3 80 90 3
+add 2 15 10 7 2
+print
+remove 1
+print
+undo 
+print
+save new_file_3
+remove 1
+remove 1
+print
+open new_file_3
+print
+exit

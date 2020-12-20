@@ -57,6 +57,7 @@ int main() {
             std::cout << "Enter the figure's position to remove: ";
             std::cin >> position;
             document.Delete(position);
+            std::cout << "The figure has been removed\n";
         } else if (line == "print") {
             std::cout << document;
         } else if (line == "undo") {
@@ -72,6 +73,7 @@ int main() {
             std::cout << "\'exit\' - exit the program\n";
             std::cout << "\'help\' - show all the commands\n";
         } else if (line == "exit") {
+            std::cout << "Program has been completed";
             return 0;
         } else {
             std::cout << "Etered unknown command. Enter command \"help\" to print all the commands\n";
