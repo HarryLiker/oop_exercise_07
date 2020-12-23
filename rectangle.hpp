@@ -13,11 +13,11 @@ private:
 public:
     Rectangle() {}
     Rectangle(std::pair<T,T> center, T length, T width): Center(center), Length(length), Width(width) {}
-
+    // Print rectangle’s parameters
     void Print(std::ostream &out) {
         out << *this;
     }
-
+    // Write the rectangle in file
     void Write(FILE *file) {
         fwrite(&RECTANGLE_ID_TYPE, sizeof(unsigned int), 1, file);
         fwrite(&Center.first, sizeof(T), 1, file);
@@ -35,4 +35,4 @@ public:
         out << "(" << rectangle.Center.first + rectangle.Length / 2.0 << ", " << rectangle.Center.second - rectangle.Width / 2.0 <<")}";
         return out;
     }
-};
+}; 

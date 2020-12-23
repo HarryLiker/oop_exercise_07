@@ -8,7 +8,7 @@
 int main() {
     Document<int> document;
     std::string line;
-    while (std::cin >> line) {
+    while (std::cin >> line) { // read command
         if (line == "new") {
             document.CreateNew();
             std::cout << "New document has been created\n";
@@ -20,7 +20,7 @@ int main() {
             if (file == NULL) {
                 std::cout << "File open error\n";
             } else {
-                document.LoadFromFile(file);
+                document.LoadFromFile(file); // Loading the figures from file
                 std::cout << "Document has been uploaded\n";
             }
             fclose(file);
@@ -31,7 +31,7 @@ int main() {
             if (file == NULL) {
                 std::cout << "File open error\n";
             } else {
-                document.SaveInFile(file);
+                document.SaveInFile(file); // Saving the figure in file
                 std::cout << "The file has been saved\n";
             }
             fclose(file);
@@ -46,7 +46,7 @@ int main() {
                 }
                 std::cout << "Enter the position of the figure: ";
                 std::cin >> position;
-                document.Add(position, type);
+                document.Add(position, type); // Adding the figure in document by index
                 std::cout << "The figure has been added\n";
             }
             catch(const char *error) {
@@ -56,13 +56,13 @@ int main() {
             size_t position;
             std::cout << "Enter the figure's position to remove: ";
             std::cin >> position;
-            document.Delete(position);
+            document.Delete(position); // Remove figure from the document by index
             std::cout << "The figure has been removed\n";
         } else if (line == "print") {
             std::cout << "Figures in document:\n";
             std::cout << document;
         } else if (line == "undo") {
-            document.Undo();
+            document.Undo(); // Cancel the previous action
         } else if (line == "help") {
             std::cout << "\'new\' - create new document\n";
             std::cout << "\'open\' - open document\n";

@@ -98,7 +98,7 @@ public:
 				++iterator;
 			}
 			FiguresList.insert(iterator, figure);
-			DeleteAction* delete_action = new DeleteAction(position + 1);
+			DeleteAction* delete_action = new DeleteAction(position);
 			ActionStack.push(action_pointer(delete_action));
 		}
 	}
@@ -119,7 +119,7 @@ public:
 				++current_position;
 				++iterator;
 			}
-			AddAction* addAct = new AddAction(current_position - 1, *iterator);
+			AddAction* addAct = new AddAction(current_position, *iterator);
 			ActionStack.push(action_pointer(addAct));
 			FiguresList.erase(iterator);
 		}

@@ -15,10 +15,11 @@ private:
 public:
     Trapeze() {}
     Trapeze(std::pair<T,T> center, T down_side, T upper_side, T height): Center(center), DownSide(down_side), UpperSide(upper_side), Height(height) {}
+    // Print trapeze parameters
     void Print(std::ostream &out) {
         out << *this;
     }
-
+    // Write trapeze in file
     void Write(FILE *out) override {
         fwrite(&TRAPEZE_ID_TYPE, sizeof(unsigned int), 1, out);
         fwrite(&Center.first, sizeof(T), 1, out);

@@ -5,7 +5,7 @@
 #include "rectangle.hpp"
 #include "rhombus.hpp"
 #include "trapeze.hpp"
-
+// Class for creating graphical primitives
 template <class T, class FIGURE>
 class Factory;
 
